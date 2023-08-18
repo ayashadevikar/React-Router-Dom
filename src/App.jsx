@@ -1,26 +1,24 @@
-import Header from "./Components/Header";
-import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
-import Home from "./Components/Home";
-import About from "./Components/About";
-import Contact from "./Components/Contact";
-import Product from "./Components/Product";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import About from "./components/About";
+import Contact from "./components/Contact";
+
+import './header.css';
 
 function App() {
   
   return (
    
-     <Router>
-         <Header />
-        <Routes>
-            
-             <Route path="/" element={<Home />} />
-             <Route path="/about" element={<About />} />
-             <Route path="/contact" element={<Contact />} />
-             <Route path="/product/:id" element={<Product />} />
-        
-        </Routes>
-         
-     </Router>
+   <Router>
+        <Header />
+         <Routes>
+               <Route path="/" element={<Home />}/> 
+               <Route path="/about" element={<About  />}/>
+               <Route path="/contact" element={<Contact />}/>
+         </Routes>
+
+   </Router>
    
   
   );
